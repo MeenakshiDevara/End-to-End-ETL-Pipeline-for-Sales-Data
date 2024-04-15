@@ -1,0 +1,283 @@
+{
+  "name" : "RetailOrganizationDataMigration-1713078232665",
+  "sourceOrgId" : "7NNKULZjRL4iXIQuvvM60B",
+  "sourceOrgName" : "Grow Data Skills",
+  "exportedObjects" : [ {
+    "objectGuid" : "7tZCsFjd3cPlbPSRPJndeJ",
+    "objectName" : "m_sales_stage_task",
+    "objectType" : "MTT",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX0Z00000000000D"
+      },
+      "objectRefs" : [ "8OUXEYyIxhhh2CvNykDLUM", "aPJVOXyrnrCfLQWYGZWJOM", "7ixyQ2FHuIfjrA415ZzccB", "73OoXF7VyHFk3DxpZv6TM7" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6pE0vKnFWmlfh02RVFvY8P",
+    "objectName" : "m_sales_bkp",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX1700000000000D"
+      },
+      "objectRefs" : [ "8OUXEYyIxhhh2CvNykDLUM", "73OoXF7VyHFk3DxpZv6TM7" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9KOLguZxr2NieiTnIhoeK3",
+    "objectName" : "RetailOrganizationDataMigration",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "3eqk5RGvIK2jfmsjAhVfii",
+    "objectName" : "sales_ETL_End-to-End_Taskflow",
+    "objectType" : "TASKFLOW",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "46NFuxTtlI20hEL-gt-33388948-2024-04-11T16:45:23.888Z::tf.xml"
+      },
+      "objectRefs" : [ "9TPZU8oH3UfjpH3T1pI56U", "7tZCsFjd3cPlbPSRPJndeJ", "7Q7tAZKXupohKfapkxpfYC" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "204BxRcZw6hdP75Oxi8S47",
+    "objectName" : "Profiling_2019SalesData",
+    "objectType" : "PROFILE",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ca11e92f-5a28-42a2-809a-30f92be552b3"
+      },
+      "objectRefs" : [ "73OoXF7VyHFk3DxpZv6TM7" ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "json",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "73OoXF7VyHFk3DxpZv6TM7",
+    "objectName" : "Flat_file_Con_Retail_Sale",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX0B000000000003"
+      },
+      "objectRefs" : [ "7ixyQ2FHuIfjrA415ZzccB" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Sales Project",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "9TPZU8oH3UfjpH3T1pI56U",
+    "objectName" : "m_sales_prod_task",
+    "objectType" : "MTT",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX0Z00000000000E"
+      },
+      "objectRefs" : [ "9vwbfQuo4KtkLazcqOdKaR", "8OUXEYyIxhhh2CvNykDLUM", "7ixyQ2FHuIfjrA415ZzccB" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9vwbfQuo4KtkLazcqOdKaR",
+    "objectName" : "m_sales_prod",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX1700000000000F"
+      },
+      "objectRefs" : [ "8OUXEYyIxhhh2CvNykDLUM" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "8OUXEYyIxhhh2CvNykDLUM",
+    "objectName" : "Snow_Flake_Con",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX0B000000000005"
+      },
+      "objectRefs" : [ "7ixyQ2FHuIfjrA415ZzccB" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Sales Project",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "aPJVOXyrnrCfLQWYGZWJOM",
+    "objectName" : "m_sales_stage",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX1700000000000E"
+      },
+      "objectRefs" : [ "8OUXEYyIxhhh2CvNykDLUM", "73OoXF7VyHFk3DxpZv6TM7" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7Q7tAZKXupohKfapkxpfYC",
+    "objectName" : "m_sales_bkp_task",
+    "objectType" : "MTT",
+    "path" : "/Explore/RetailOrganizationDataMigration",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX0Z00000000000C"
+      },
+      "objectRefs" : [ "8OUXEYyIxhhh2CvNykDLUM", "6pE0vKnFWmlfh02RVFvY8P", "7ixyQ2FHuIfjrA415ZzccB", "73OoXF7VyHFk3DxpZv6TM7" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7ixyQ2FHuIfjrA415ZzccB",
+    "objectName" : "LAPTOP-G21RJ88K",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IZX25000000000002"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  } ]
+}

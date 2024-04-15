@@ -1,0 +1,309 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>46NFuxTtlI20hEL-gt-33388948-2024-04-11T16:45:23.888Z::tf.xml</types1:EntryId>
+      <types1:Name>sales_ETL_End-to-End_Taskflow</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>meenakshidevara</types1:CreatedBy>
+      <types1:CreationDate>2024-04-11T16:45:24Z</types1:CreationDate>
+      <types1:ModifiedBy>meenakshidevara</types1:ModifiedBy>
+      <types1:ModificationDate>2024-04-11T16:58:12Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>meenakshidevara</types1:PublishedBy>
+      <types1:PublicationDate>2024-04-11T16:58:19Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.sales_ETL_End-to-End_Taskflow/sales_ETL_End-to-End_Taskflow.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="sales_ETL_End-to-End_Taskflow"
+                   name="sales_ETL_End-to-End_Taskflow"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="m_sales_bkp_DataTask" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:m-sales-bkp-task</option>
+                  </options>
+               </field>
+               <field description="" name="m_Sales_stage_DataTask" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:m-sales-stage-task</option>
+                  </options>
+               </field>
+               <field description="" name="m_sales_prod_DataTask" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:m-sales-prod-task</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="j3wfjy2l" targetId="luvgz4tg"/>
+               </start>
+               <eventContainer id="luvgz4tg">
+                  <service id="j3wfjy2k">
+                     <title>m_sales_bkp_DataTask</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">m_sales_bkp_task</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">7Q7tAZKXupohKfapkxpfYC</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="m-sales-bkp-task">temp.m_sales_bkp_DataTask</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.m_sales_bkp_DataTask/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_sales_bkp_DataTask/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.m_sales_bkp_DataTask/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="j3wfjy2t" targetId="luvgz4uk"/>
+                  <events>
+                     <catch faultField="temp.m_sales_bkp_DataTask/fault"
+                            id="luvgz4te"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.m_sales_bkp_DataTask/fault"
+                            id="luvgz4tf"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="luvgz4uk">
+                  <service id="j3wfjy2s">
+                     <title>m_Sales_stage_DataTask</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">m_sales_stage_task</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">7tZCsFjd3cPlbPSRPJndeJ</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="m-sales-stage-task">temp.m_Sales_stage_DataTask</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.m_Sales_stage_DataTask/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_Sales_stage_DataTask/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_Sales_stage_DataTask/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_Sales_stage_DataTask/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.m_Sales_stage_DataTask/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="luvgz4v7" targetId="luvgz4vu"/>
+                  <events>
+                     <catch faultField="temp.m_Sales_stage_DataTask/fault"
+                            id="luvgz4ui"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.m_Sales_stage_DataTask/fault"
+                            id="luvgz4uj"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="luvgz4vu">
+                  <service id="luvgz4v6">
+                     <title>m_sales_prod_DataTask</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">m_sales_prod_task</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">9TPZU8oH3UfjpH3T1pI56U</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="m-sales-prod-task">temp.m_sales_prod_DataTask</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.m_sales_prod_DataTask/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_sales_prod_DataTask/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_sales_prod_DataTask/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.m_sales_prod_DataTask/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.m_sales_prod_DataTask/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="luvgz4v8" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.m_sales_prod_DataTask/fault"
+                            id="luvgz4vs"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.m_sales_prod_DataTask/fault"
+                            id="luvgz4vt"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="m-sales-bkp-task"
+                              isByCopy="true"
+                              name="m-sales-bkp-task">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="m-sales-stage-task"
+                              isByCopy="true"
+                              name="m-sales-stage-task">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="m-sales-prod-task"
+                              isByCopy="true"
+                              name="m-sales-prod-task">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>3eqk5RGvIK2jfmsjAhVfii</types1:GUID>
+      <types1:DisplayName>sales_ETL_End-to-End_Taskflow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-04-14T07:04:02.63Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
